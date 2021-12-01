@@ -21,6 +21,7 @@ func main() {
 	} else {
 		fmt.Println(x)
 	}
+	// fmt.Println(x) that doesn't work cause is out of scope
 
 	fmt.Println("Here's a Statement")
 
