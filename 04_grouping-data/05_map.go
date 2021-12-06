@@ -27,7 +27,8 @@ func main() {
 	//
 	// map delete
 
-	delete(m, "James")
-
-	fmt.Println(m)
+	if v, ok := m["Ian Fleming"]; ok {
+		fmt.Println(v)
+		delete(m, "James")
+	}
 }
