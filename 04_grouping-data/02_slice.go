@@ -13,4 +13,11 @@ func main() {
 	for i, v := range x {
 		fmt.Println(i, v)
 	}
+
+	for i := 0; i < len(x); i++ {
+		fmt.Println(i, x[i])
+	}
+
+	fmt.Println(x[1:])
+	fmt.Println(x[1:3])
 }
