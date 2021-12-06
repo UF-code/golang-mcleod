@@ -34,4 +34,9 @@ func main() {
 	fmt.Println(y)
 	x = append(x, y...)
 	fmt.Println(x)
+
+	//
+	// delete
+	x = append(x[:2], x[4:]...)
+	fmt.Println(x)
 }
