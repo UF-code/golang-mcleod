@@ -15,4 +15,10 @@ func main() {
 	if v, ok := m["Barnabas"]; ok {
 		fmt.Println(v)
 	}
+
+	m["Todd"] = 43
+
+	for k, v := range m {
+		println(k, v)
+	}
 }
