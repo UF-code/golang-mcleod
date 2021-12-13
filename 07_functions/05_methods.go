@@ -12,6 +12,8 @@ type secretAgent struct {
 	ltk bool
 }
 
+// func (r receiver) identifier(parameters) (return(s)) {code}
+
 func (s secretAgent) speak() {
 	fmt.Println("I am ", s.first, s.last)
 }
