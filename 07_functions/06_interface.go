@@ -15,6 +15,9 @@ type secretAgent struct {
 func (s secretAgent) speak() {
 	fmt.Println("I am ", s.first, s.last)
 }
+func (p person) speak() {
+	fmt.Println("I am ", p.first, p.last)
+}
 
 type human interface {
 	speak()
@@ -44,8 +47,24 @@ func main() {
 		ltk: true,
 	}
 
+	p1 := person{
+		first: "Dr.",
+		last:  "Yes",
+	}
+
 	fmt.Println(sa2)
 
 	sa1.speak()
 	sa2.speak()
+	p1.speak()
+
+	fmt.Println("*************************************************")
+
+	bar(sa1)
+	bar(sa2)
+	bar(p1)
+
+	//
+	// conversion
+
 }
