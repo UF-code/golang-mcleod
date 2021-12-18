@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// struct
 type person struct {
 	first string
 	last  string
@@ -11,6 +12,7 @@ type secretAgent struct {
 	ltk bool
 }
 
+//
 func (s secretAgent) speak() {
 	fmt.Println("I am", s.first, s.last, "and I have ltk:", s.ltk, "---secretAgent")
 }
@@ -32,6 +34,7 @@ func bar(h human) {
 	fmt.Println("I called human", h)
 }
 
+// interfaces
 type human interface {
 	speak()
 }
