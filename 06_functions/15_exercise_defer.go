@@ -4,13 +4,12 @@ import "fmt"
 
 func main() {
 	defer foo()
-	bar()
-}
-
-func bar() {
-	fmt.Println("Not anymore")
+	fmt.Println("First of all")
 }
 
 func foo() {
-	fmt.Println("I was the first called")
+	defer func() {
+		fmt.Println("defer defer foo")
+	}()
+	fmt.Println("defer foo")
 }
