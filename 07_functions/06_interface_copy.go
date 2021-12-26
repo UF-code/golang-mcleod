@@ -29,9 +29,19 @@ type human interface {
 	speak()
 }
 
+// assertion
 func bar(h human) {
+	switch h.(type) {
+	case person:
+		fmt.Println("I called person", h.(person).first, " - inside bar person")
+	case secretAgent:
+		fmt.Println("I called secretAgent", h.(secretAgent).first, " - inside bar secret agent")
+	}
+
 	fmt.Println("I called Human", h, " - inside bar")
 }
+
+type hotdog int
 
 func main() {
 	sa1 := secretAgent{
@@ -60,4 +70,13 @@ func main() {
 	}
 	p1.speak()
 	bar(p1)
+
+	// conversion
+	var x hotdog = 42
+	fmt.Println(x)
+	fmt.Printf("%T\n", x)
+	var y int
+	y = int(x)
+	fmt.Println(y)
+	fmt.Printf("%T\n", y)
 }
