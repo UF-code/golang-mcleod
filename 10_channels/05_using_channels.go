@@ -22,4 +22,6 @@ func foo(c chan<- int) {
 }
 
 // receive
-func bar(c <-chan int) {}
+func bar(c <-chan int) {
+	fmt.Println(<-c)
+}
